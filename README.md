@@ -47,7 +47,7 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lingkungan lokal:
 
 1.  **Clone Repository**:
     ```bash
-    git clone [https://github.com/dapiupiu/book-store-project.git](https://github.com/dapiupiu/book-store-project.git)
+    git clone https://github.com/dapiupiu/book-store-project.git
     ```
 2.  **Import ke IDE**:
     * Buka Eclipse IDE.
