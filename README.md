@@ -11,7 +11,7 @@ Aplikasi ini menonjolkan fitur manajemen data relasional yang sinkron antara kat
 Teknologi yang digunakan dalam pengembangan proyek ini meliputi:
 
 * **Bahasa Pemrograman**: Java 23.
-* **Framework**: Spring Boot 3.3 (Spring MVC, Spring Data JPA).
+* **Framework**: Spring Boot 3.3.3 (Spring MVC, Spring Data JPA).
 * **Template Engine**: Thymeleaf untuk rendering halaman HTML dinamis.
 * **CSS Framework**: Bootstrap 5 untuk antarmuka yang responsif.
 * **Database**: H2 Database (File-based Engine).
