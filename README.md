@@ -1,8 +1,6 @@
 # 📚 SI-Buku: Sistem Informasi Pengelolaan Toko Buku (Administrator)
 
-**SI-Buku** adalah aplikasi manajemen inventaris toko buku berbasis web yang dikembangkan menggunakan framework **Java Spring Boot**. Proyek ini merupakan implementasi nyata dari konsep Pemrograman Berorientasi Objek (PBO) dalam arsitektur sistem informasi, yang disusun oleh **Kaka Davi Dharmawan**, mahasiswa Ilmu Komputer semester 6 **UINSU Medan**.
-
-Aplikasi ini menonjolkan fitur manajemen data relasional yang sinkron antara kategori dan koleksi buku.
+**SI-Buku** adalah aplikasi manajemen inventaris toko buku berbasis web yang dikembangkan menggunakan framework **Java Spring Boot**. Proyek ini merupakan implementasi nyata dari konsep Pemrograman Berorientasi Objek (PBO) dalam arsitektur sistem informasi. Aplikasi ini menonjolkan fitur manajemen data relasional yang sinkron antara kategori dan koleksi buku.
 
 ---
 
