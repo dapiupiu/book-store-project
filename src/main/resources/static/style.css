@@ -1,0 +1,214 @@
+/*
+Theme Name: Modern Booksaw - Soft Sage Edition
+Description: Minimalist & Professional UI for MySpring Project
+*/
+
+:root {
+  --primary-color: #059669; /* Soft Emerald/Sage Green */
+  --accent-color: #10b981;
+  --bg-color: #f8fafc;      /* Very Light Gray/White */
+  --card-bg: #ffffff;
+  --text-main: #1e293b;     /* Deep Slate */
+  --text-muted: #64748b;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* GENERAL REBOOT */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+}
+
+/* MINIMALIST NAVBAR */
+#header-wrap {
+background: var(--glass-bg);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid var(--border-color);
+position: sticky;
+top: 0;
+z-index: 1000;
+padding: 10px 0;
+}
+
+.menu-list li a {
+color: var(--text-main) !important;
+font-weight: 600;
+text-transform: uppercase;
+font-size: 0.8rem;
+letter-spacing: 0.5px;
+padding: 10px 15px;
+}
+
+.menu-list li a:hover {
+color: var(--primary-color) !important;
+}
+
+/* MINIMALIST NAVBAR (FULLY TRANSPARENT) 
+#header-wrap {
+  background: transparent; 
+  backdrop-filter: none; 
+  -webkit-backdrop-filter: none;
+  border-bottom: none; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;   
+  transition: all 0.3s ease;
+}
+
+.menu-list li a {
+  color: var(--text-main) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.menu-list li a:hover {
+  color: var(--primary-color) !important;
+  background: rgba(5, 150, 105, 0.05); 
+  border-radius: 8px;
+} */
+
+/* HERO SECTION */
+#billboard {
+  padding: 100px 0;
+  background: radial-gradient(circle at top right, #ecfdf5, #f8fafc);
+}
+
+.banner-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.text-accent {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.banner-image {
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* ELEGANT CARDS */
+.product-item {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  height: 100%;
+}
+
+.product-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(5, 150, 105, 0.08);
+  border-color: var(--accent-color);
+}
+
+.product-style img {
+  border-radius: 15px;
+  width: 100%;
+  filter: grayscale(10%) contrast(95%);
+  transition: 0.4s ease;
+}
+
+.product-item:hover .product-style img {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.product-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  color: var(--text-main);
+}
+
+.item-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* SOFT BUTTONS */
+.btn-accent-arrow, .add-to-cart {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-accent-arrow:hover, .add-to-cart:hover {
+  background-color: #047857;
+  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.2);
+}
+
+/* INFO SECTION (ABOUT) */
+#about-uinsu {
+  background-color: #f1f5f9;
+  border-radius: 50px 50px 0 0;
+}
+
+.card {
+  background: white !important;
+  border: none !important;
+  border-radius: 24px !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* OPTIMALISASI GAMBAR */
+.main-logo img {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* penyesuaian responsif untuk hp */
+@media (max-width: 768px) {
+    .banner-image {
+        max-height: 300px;
+        margin-top: 30px;
+    }
+}

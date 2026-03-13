@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/vendor.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle at top right, #ecfdf5, #f8fafc);
+        }
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            background-color: #fcfdfd;
+        }
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25 margin rgba(5, 150, 105, 0.1);
+        }
+        .back-to-home {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .back-to-home:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card login-card shadow-sm border-0">
+        <div class="text-center mb-4">
+            <div class="mb-3">
+                <img th:src="@{/images/main-logo.png}" alt="Logo" style="max-height: 50px;">
+            </div>
+            <h4 class="fw-bold text-accent">Portal Admin</h4>
+            <p class="text-muted small">Masuk untuk mengelola Buku</p>
+        </div>
+
+        <form th:action="@{/login}" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label small fw-bold text-secondary">Username</label>
+                <input type="text" id="username" name="username" class="form-control" 
+                       placeholder="Masukkan username" required autofocus>
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="form-label small fw-bold text-secondary">Password</label>
+                <input type="password" id="password" name="password" class="form-control" 
+                       placeholder="Masukkan password" required>
+            </div>
+
+            <button type="submit" class="btn-accent-arrow w-100 border-0">
+                Masuk
+            </button>
+
+            <div th:if="${error}" class="alert alert-danger mt-3 py-2 text-center border-0" 
+                 style="background-color: #fef2f2; color: #991b1b; border-radius: 10px; font-size: 0.85rem;">
+                <span th:text="${error}">Username atau password salah</span>
+            </div>
+        </form>
+        
+        <div class="text-center">
+            <a th:href="@{/}" class="back-to-home text-decoration-none">
+                <i class="icon icon-ns-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </div>
+
+    <script th:src="@{/js/jquery-1.11.0.min.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
